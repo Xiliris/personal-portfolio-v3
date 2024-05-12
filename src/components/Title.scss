@@ -1,0 +1,5 @@
+@import "../sass/colors.scss", "../sass/mixin.scss";
+
+h1 {
+  @include title;
+}

@@ -1,0 +1,72 @@
+@import "../sass/colors.scss", "../sass/mixin.scss";
+
+#about {
+  @include page();
+  main {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      @include title;
+    }
+    section {
+      margin-top: 16px;
+      p {
+        color: $secondary;
+        font-size: 1.2em;
+
+        &:nth-child(odd) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    a {
+      margin-left: auto;
+    }
+
+    button {
+      margin-top: 32px;
+      border: 1px solid $primary-emphasis;
+      border-radius: 6px;
+      background-color: $primary-emphasis;
+      padding: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $primary-emphasis;
+        color: black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    padding: 3% 10%;
+
+    main {
+      h1 {
+        font-size: 4em;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 1em;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #about {
+    main {
+      h1 {
+        font-size: 3em;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

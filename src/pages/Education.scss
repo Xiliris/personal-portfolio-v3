@@ -1,0 +1,63 @@
+@import "../sass/colors.scss", "../sass/mixin.scss";
+
+#education {
+  @include page();
+  main {
+    h1 {
+      @include title;
+    }
+
+    section {
+      article {
+        margin: 16px 0;
+        .date {
+          font-size: 0.8em;
+        }
+
+        h2 {
+          color: $primary;
+        }
+
+        p {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1155px) {
+  #education {
+    main {
+      h1 {
+        font-size: 4em;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #education {
+    padding: 3% 10%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #education {
+    margin: 32px 0;
+    main {
+      h1 {
+        font-size: 3em;
+        margin-bottom: 12px;
+      }
+      section {
+        div {
+          .date {
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}

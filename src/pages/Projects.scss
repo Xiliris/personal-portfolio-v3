@@ -1,0 +1,141 @@
+@import "../sass/colors.scss", "../sass/mixin.scss";
+
+#projects {
+  @include page;
+  main {
+    h1 {
+      @include titleFlip;
+    }
+
+    section {
+      margin: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 50px;
+
+      article {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+
+        h2 {
+          color: $primary-emphasis;
+          font-size: 2em;
+        }
+
+        p {
+          color: $primary;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        h3 {
+          color: $primary-emphasis;
+          margin-top: 15px;
+          margin-bottom: 5px;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          width: 100%;
+          a {
+            color: $secondary;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            span {
+              color: $primary-emphasis;
+            }
+
+            &:hover {
+              span {
+                color: $primary;
+              }
+            }
+          }
+
+          .nohover {
+            &:hover {
+              cursor: default;
+              span {
+                color: $primary-emphasis;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1155px) {
+  #projects {
+    main {
+      h1 {
+        font-size: 4em;
+        margin-bottom: 12px;
+      }
+
+      section {
+        article {
+          h2 {
+            font-size: 1.5em;
+          }
+          p {
+            font-size: 1em;
+          }
+
+          h3 {
+            font-size: 1.3em;
+          }
+          a {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #projects {
+    padding: 3% 10%;
+
+    main {
+      section {
+        article {
+          h2 {
+            font-size: 1.2em;
+          }
+          p {
+            font-size: 0.9em;
+          }
+
+          h3 {
+            font-size: 1.2em;
+          }
+          a {
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #projects {
+    margin: 32px 0;
+    main {
+      h1 {
+        font-size: 3em;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

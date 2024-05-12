@@ -1,0 +1,84 @@
+@import "../sass/colors.scss", "../sass/mixin.scss";
+
+#experience {
+  @include page();
+  main {
+    h1 {
+      @include titleFlip;
+    }
+
+    section {
+      .date-small {
+        display: none;
+      }
+      div {
+        margin: 16px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        aside {
+          h2 {
+            color: $primary-emphasis;
+          }
+
+          h3 {
+            color: $primary;
+          }
+
+          p {
+            color: $secondary;
+          }
+        }
+
+        p {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1155px) {
+  #experience {
+    main {
+      h1 {
+        font-size: 4em;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #experience {
+    padding: 3% 10%;
+
+    main {
+      .date-big {
+        display: none;
+      }
+      section {
+        div {
+          aside {
+            .date-small {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #experience {
+    margin: 32px 0;
+    main {
+      h1 {
+        font-size: 3em;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

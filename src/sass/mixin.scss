@@ -1,0 +1,32 @@
+@mixin banner() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@mixin page() {
+  max-width: 1040px;
+  margin: 20px auto;
+  padding: 50px 5%;
+}
+
+@mixin title() {
+  color: $primary-emphasis;
+  font-size: 5em;
+  line-height: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin titleFlip() {
+  color: $primary-emphasis;
+  font-size: 5em;
+  text-align: end;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}

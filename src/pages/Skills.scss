@@ -1,0 +1,52 @@
+@import "../sass/colors.scss", "../sass/mixin.scss";
+
+#skills {
+  @include page();
+  main {
+    h1 {
+      @include titleFlip;
+    }
+
+    section {
+      div {
+        margin: 16px 0;
+        h2 {
+          color: $primary;
+        }
+
+        h3 {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1155px) {
+  #skills {
+    main {
+      h1 {
+        font-size: 4em;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #skills {
+    padding: 3% 10%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #skills {
+    margin: 32px 0;
+    main {
+      h1 {
+        font-size: 3em;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
