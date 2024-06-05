@@ -8,32 +8,76 @@
     }
 
     section {
-      .date-small {
-        display: none;
-      }
-      div {
+      article {
         margin: 16px 0;
         display: flex;
-        align-items: center;
         justify-content: space-between;
-
-        aside {
-          h2 {
-            color: $primary-emphasis;
-          }
-
-          h3 {
-            color: $primary;
-          }
-
-          p {
-            color: $secondary;
-          }
+        flex-direction: column;
+        div {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-direction: column;
         }
 
         p {
-          color: $primary;
+          color: $secondary;
         }
+        .border- {
+          border-bottom: 1px solid $secondary;
+        }
+        .title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+          padding-bottom: 10px;
+
+          .content {
+            h2 {
+              color: $primary-emphasis;
+            }
+
+            h3 {
+              color: $primary;
+            }
+          }
+
+          .more {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 50px;
+            i {
+              color: $primary-emphasis;
+              transition: color 0.1s ease, transform 0.1s ease;
+              cursor: pointer;
+              transform: rotate(-90deg) scale(1.5);
+
+              &:hover {
+                color: $primary;
+              }
+            }
+
+            .arrow-hide {
+              transform: rotate(90deg) scale(1.5);
+            }
+          }
+        }
+
+        .description {
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+
+        .hide {
+          display: none;
+        }
+      }
+
+      p {
+        color: $primary;
       }
     }
   }
@@ -53,21 +97,6 @@
 @media screen and (max-width: 768px) {
   #experience {
     padding: 3% 10%;
-
-    main {
-      .date-big {
-        display: none;
-      }
-      section {
-        div {
-          aside {
-            .date-small {
-              display: inline-block;
-            }
-          }
-        }
-      }
-    }
   }
 }
 
