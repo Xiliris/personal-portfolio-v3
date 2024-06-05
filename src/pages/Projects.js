@@ -57,14 +57,8 @@ function Projects() {
           <ProjectsItem
             title={"DIXIE Discord Chat Bot (Ongoing Project)"}
             description={
-              "Discord chatbot with various commands and online dashboard. The bot is built using React, Node.js, Express, MongoDB, and Discord.js."
+              "I am currently working on a Discord chat bot project in collaboration with a talented team of designers and developers. The chat bot is built with React, SASS, Bootstrap, Node.js, Express, MongoDB, Redis and Discord.js. I am responsible for project management, team lead, front-end and back-end development."
             }
-            liveDemoUrl={"https://dixie-bot.netlify.app"}
-            frontEndSourceCodeUrl={"https://github.com/Xiliris/dixie-website"}
-            backEndSourceCodeUrl={
-              "https://github.com/Xiliris/ita-linker-backend"
-            }
-            chatBotSourceCodeUrl={"https://github.com/Xiliris/dixie-bot"}
             index={1}
           />
         </section>
@@ -92,26 +86,32 @@ function ProjectsItem({
     >
       <h2>{title}</h2>
       <p>{description}</p>
-      <h3>Preview</h3>
       <div>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          label="Linker live demo url"
-          href={liveDemoUrl}
-        >
-          Live Demo
-          <span className="material-symbols-outlined">chevron_right</span>
-        </a>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          label="Linker source code url"
-          href={frontEndSourceCodeUrl}
-        >
-          Front-end Source Code
-          <span className="material-symbols-outlined">chevron_right</span>
-        </a>
+        {liveDemoUrl ? (
+          <>
+            <h3>Preview</h3>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              label="Linker live demo url"
+              href={liveDemoUrl}
+            >
+              Live Demo
+              <span className="material-symbols-outlined">chevron_right</span>
+            </a>
+          </>
+        ) : null}
+        {frontEndSourceCodeUrl ? (
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            label="Linker source code url"
+            href={frontEndSourceCodeUrl}
+          >
+            Front-end Source Code
+            <span className="material-symbols-outlined">chevron_right</span>
+          </a>
+        ) : null}
         {backEndSourceCodeUrl ? (
           <a
             rel="noopener noreferrer"

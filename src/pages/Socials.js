@@ -58,6 +58,12 @@ const socialsArray = [
     icon: "fa-solid fa-envelope fa-3x",
     label: "Send Email",
   },
+  {
+    index: 6,
+    link: "https://www.npmjs.com/~xiliris",
+    icon: "fa-brands fa-npm fa-3x",
+    label: "Node Package Manager Profile",
+  },
 ];
 
 export default Socials;

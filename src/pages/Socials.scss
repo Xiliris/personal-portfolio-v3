@@ -25,6 +25,7 @@
 @media screen and (max-width: 1155px) {
   #socials {
     section {
+      padding: 30px 10%;
       i {
         transform: scale(0.8);
       }
@@ -33,15 +34,24 @@
 }
 
 @media screen and (max-width: 768px) {
+  #socials {
+    section {
+      padding: 15px 10%;
+
+      i {
+        transform: scale(0.6);
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 420px) {
   #socials {
     section {
-      padding: 20px 5%;
+      padding: 15px 10%;
 
       i {
-        transform: scale(0.6);
+        transform: scale(0.5);
       }
     }
   }
