@@ -1,0 +1,142 @@
+@import "../styles/variable.scss";
+
+#feedback {
+  display: flex;
+  flex-direction: column;
+
+  .feedback__container {
+    width: 70vw;
+    margin: 12em auto;
+
+    .title {
+      margin-bottom: 1em;
+    }
+
+    article {
+      border-bottom: 2px solid $primary-emphasis;
+      border-radius: 12px;
+      padding-bottom: 1em;
+      .feedback__content {
+        h3 {
+          font-size: 2.5em;
+          color: $primary;
+          line-height: 1.2em;
+
+          span {
+            transform: scale(3) translateX(-0.8em);
+          }
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          text-align: right;
+          margin-top: 1em;
+
+          h4 {
+            color: $primary-emphasis;
+            font-size: 1.3em;
+            line-height: 1.5em;
+            margin: 0;
+            margin-bottom: 0.3em;
+          }
+
+          p {
+            color: $secondary;
+            font-size: 1em;
+            line-height: 1.5em;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  #feedback {
+    .feedback__container {
+      width: 80vw;
+      margin: 8em auto;
+
+      article {
+        .feedback__content {
+          h3 {
+            font-size: 2em;
+            span {
+              transform: scale(2) translateX(-0.8em);
+            }
+          }
+
+          div {
+            h4 {
+              font-size: 1.2em;
+            }
+
+            p {
+              font-size: 0.9em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  #feedback {
+    .feedback__container {
+      margin: 8em auto;
+
+      article {
+        .feedback__content {
+          h3 {
+            font-size: 1.8em;
+            span {
+              transform: scale(1.5) translateX(-0.8em);
+            }
+          }
+
+          div {
+            h4 {
+              font-size: 1em;
+            }
+
+            p {
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  #feedback {
+    .feedback__container {
+      width: 80vw;
+
+      article {
+        .feedback__content {
+          h3 {
+            font-size: 1.5em;
+            span {
+              transform: scale(1.5) translateX(-0.8em);
+            }
+          }
+
+          div {
+            h4 {
+              font-size: 0.8em;
+            }
+
+            p {
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

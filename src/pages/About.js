@@ -1,54 +1,27 @@
-import { motion } from "framer-motion";
 import "./About.scss";
-import adnanCV from "../files/AdnanSkopljakCV.pdf";
+import { motion } from "framer-motion";
+import { opacityAnimation } from "../animations/opacity";
+import Dogo from "../images/dogo.png";
 import Title from "../components/Title";
 
-import { itemAnimation } from "../animations/itemAnimations";
-import { titleAnimation } from "../animations/titleAnimation";
-
-function About() {
+export default function About() {
   return (
-    <div id="about">
-      <main>
-        <Title>ABOUT</Title>
-        <motion.section
-          variants={itemAnimation}
+    <section id="about">
+      <div>
+        <Title>About</Title>
+        <motion.p
+          variants={opacityAnimation}
           initial="initial"
           whileInView="animate"
-          custom={{ index: 0, time: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <p>
-            My name is Adnan Skopljak and I am a Software Development Engineer
-            based in Kreševo, Bosnia and Herzegovina. Certified Front-End
-            JavaScript Developer with practical experience gained through
-            training sessions with highly skilled mentors from IT Academy.
-          </p>
-          <p>
-            {" "}
-            My main focus is working on Front-end, creating, designing and
-            developing high-quality, modern content. my abilities do not stop
-            there, as I am skilled in Back-end technologies and more.
-          </p>
-        </motion.section>
-        <a
-          href={adnanCV}
-          download="AdnanSkopljakCV"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <motion.button
-            variants={titleAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            DOWNLOAD CV
-          </motion.button>
-        </a>
-      </main>
-    </div>
+          I am a <span>Software Development Engineer</span> located in Kreševo,
+          Bosnia and Herzegovina. I specialize in creating high-quality, modern
+          web applications, bringing innovative ideas to life with cutting-edge
+          technology and a passion for excellence.
+        </motion.p>
+      </div>
+      <img src={Dogo} alt="Dogo" />
+    </section>
   );
 }
-
-export default About;

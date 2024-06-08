@@ -1,96 +1,37 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { opacityAnimation } from "../animations/opacity";
+import Title from "../components/Title";
 import "./Experience.scss";
 
-import { itemAnimation } from "../animations/itemAnimations";
-import Title from "../components/Title";
-
-function Experience() {
+export default function Experience() {
   return (
-    <div id="experience">
-      <main>
-        <Title>EXPERIENCE</Title>
-        <section>
-          <ExpItem
-            title={"Internship"}
-            description={
-              "Leading the Back-End Team in IT Academy internship application, I control the improvement of the Linker Application's server-facet functionalities. Utilizing NodeJS, Express, MongoDB and GIT, I collaborate with interns to make sure of smooth integration and efficient database control."
-            }
-            role={"Back-End Team Managment"}
-            company={"ITAcademy by LINKGroup"}
-            date={"Dec/2023-May/2024"}
-            index={1}
-          />
-          <ExpItem
-            title={"Internship"}
-            description={
-              "As the Front-End Team Lead Intern at IT Academy, I directed the improvement of the Linker Application's consumer interface. Working with ReactJS, SASS, JavaScript, Bootstrap, and GIT, I led a group of interns in growing responsive and visually appealing the front-end solutions."
-            }
-            role={"Front-End Team Lead"}
-            company={"ITAcademy by LINKGroup"}
-            date={"Nov/2023-Dec/2023"}
-            index={1}
-          />
-          <ExpItem
-            title={"Freelance"}
-            description={
-              "As the only developer at STEELPRO, I undertook the duty of manufacturing and keeping the agency's public internet site and Inner Dashboard application. I singlehandedly managed the whole improvement lifecycle, from conceptualization to deployment, ensuring a seamless consumer experience across each system."
-            }
-            role={"Web Development and Management"}
-            company={"OBRT STEELPRO, Elmir Skopljak"}
-            date={"Jun/2022-May/2023"}
-            index={1}
-          />
-        </section>
-      </main>
-    </div>
+    <section id="experience">
+      <div class="wave">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+      <article>
+        <Title>Experience</Title>
+        <motion.p
+          variants={opacityAnimation}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          Acquiring over <span>3 years</span> of practical experience in web
+          application development, with a focus on freelance projects and
+          collaborations with dynamic startups.
+        </motion.p>
+      </article>
+    </section>
   );
 }
-
-function ExpItem({
-  title,
-  description,
-  techStack,
-  role,
-  company,
-  date,
-  index,
-}) {
-  const [toggleDescription, setToggleDescription] = useState("hide");
-
-  function toggle() {
-    setToggleDescription(toggleDescription === "hide" ? "" : "hide");
-  }
-
-  return (
-    <motion.article
-      variants={itemAnimation}
-      initial="initial"
-      whileInView="animate"
-      custom={{ index: index, time: 0.2 }}
-      viewport={{ once: true, amount: 0.5 }}
-    >
-      <div className={`title border-${toggleDescription}`}>
-        <div className="content">
-          <p>{title}</p>
-          <h2>{role}</h2>
-          <h3>{company}</h3>
-          <p className="date">{date}</p>
-        </div>
-        <div className="more">
-          <i
-            className={`fas fa-chevron-right arrow-${toggleDescription}`}
-            onClick={() => {
-              toggle();
-            }}
-          ></i>
-        </div>
-      </div>
-      <div className={`description ${toggleDescription}`}>
-        <p>{description}</p>
-      </div>
-    </motion.article>
-  );
-}
-
-export default Experience;

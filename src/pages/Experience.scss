@@ -1,112 +1,72 @@
-@import "../sass/colors.scss", "../sass/mixin.scss";
+@import "../styles/variable.scss";
 
 #experience {
-  @include page();
-  main {
-    h1 {
-      @include titleFlip;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: $primary-emphasis;
+  margin-top: 6em;
+  position: relative;
+
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+    svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 94px;
+      transform: rotateY(180deg);
     }
 
-    section {
-      article {
-        margin: 16px 0;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        div {
-          display: flex;
-          align-items: flex-start;
-          justify-content: flex-start;
-          flex-direction: column;
-        }
+    .shape-fill {
+      fill: #0d0d0d;
+    }
+  }
 
-        p {
-          color: $secondary;
-        }
-        .border- {
-          border-bottom: 1px solid $secondary;
-        }
-        .title {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          flex-direction: row;
-          padding-bottom: 10px;
+  article {
+    margin: 16em auto;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: auto;
 
-          .content {
-            h2 {
-              color: $primary-emphasis;
-            }
+    p {
+      color: $background;
+      font-size: 3em;
+      font-weight: bold;
 
-            h3 {
-              color: $primary;
-            }
-          }
-
-          .more {
-            height: 100%;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            width: 50px;
-            i {
-              color: $primary-emphasis;
-              transition: color 0.1s ease, transform 0.1s ease;
-              cursor: pointer;
-              transform: rotate(-90deg) scale(1.5);
-
-              &:hover {
-                color: $primary;
-              }
-            }
-
-            .arrow-hide {
-              transform: rotate(90deg) scale(1.5);
-            }
-          }
-        }
-
-        .description {
-          margin-top: 10px;
-          margin-bottom: 20px;
-        }
-
-        .hide {
-          display: none;
-        }
-      }
-
-      p {
+      span {
         color: $primary;
       }
     }
   }
 }
 
-@media screen and (max-width: 1155px) {
+@media screen and (max-width: $desktop) {
   #experience {
-    main {
-      h1 {
-        font-size: 4em;
-        margin-bottom: 12px;
+    article {
+      width: 80vw;
+      margin: 12em auto;
+      p {
+        font-size: 2.5em;
       }
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $tablet) {
   #experience {
-    padding: 3% 10%;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  #experience {
-    margin: 32px 0;
-    main {
-      h1 {
-        font-size: 3em;
-        margin-bottom: 12px;
+    article {
+      margin-top: 8em;
+      margin-bottom: 6em;
+      p {
+        font-size: 1.8em;
       }
     }
   }

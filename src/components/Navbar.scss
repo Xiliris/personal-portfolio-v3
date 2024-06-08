@@ -1,0 +1,39 @@
+@import "../styles/variable.scss";
+nav {
+  z-index: 100;
+  position: fixed;
+  padding: 2rem 3rem;
+  width: 100vw;
+  background: linear-gradient($background, transparent);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 50;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
+    li {
+      list-style: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      color: $primary;
+
+      &:hover {
+        color: $primary-emphasis;
+      }
+    }
+  }
+}

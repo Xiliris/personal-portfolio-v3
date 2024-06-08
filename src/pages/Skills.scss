@@ -1,51 +1,162 @@
-@import "../sass/colors.scss", "../sass/mixin.scss";
+@import "../styles/variable.scss";
 
 #skills {
-  @include page();
-  main {
-    h1 {
-      @include titleFlip;
+  div {
+    width: 70vw;
+    margin: 6em auto;
+
+    h2 {
+      margin-bottom: 2em;
     }
 
-    section {
-      div {
-        margin: 16px 0;
-        h2 {
-          color: $primary-emphasis;
+    .skills__content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+
+      article {
+        background: radial-gradient($primary 60%, $secondary);
+        border-radius: 10px;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+          padding: 1.5em;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 99%;
+          width: 90%;
+          border: 1px solid transparent;
+          border-radius: 10px;
+          background-color: $background;
+          margin: 0;
         }
 
         h3 {
           color: $primary;
+          font-size: 2.5em;
+          text-transform: uppercase;
+          i {
+            margin-right: 10px;
+            color: $primary-emphasis;
+          }
+        }
+
+        p {
+          color: $primary;
+          font-size: 2.2em;
+          text-align: start;
+          margin: auto;
+        }
+      }
+
+      .skills__overview {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        margin-top: 2em;
+
+        .active {
+          transform: scale(1.5);
+          background-color: $primary;
+        }
+
+        i {
+          transition: transform 0.2s ease;
+          background-color: $secondary;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        span {
+          color: $primary;
+          transform: scale(2);
+          cursor: pointer;
+
+          &::selection {
+            background-color: transparent;
+            color: inherit;
+          }
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 1155px) {
+@media screen and (max-width: $desktop) {
   #skills {
-    main {
-      h1 {
-        font-size: 4em;
-        margin-bottom: 12px;
+    div {
+      .skills__content {
+        article {
+          div {
+            padding: 1em;
+          }
+
+          h3 {
+            font-size: 2em;
+          }
+
+          p {
+            font-size: 1.8em;
+          }
+        }
       }
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $tablet) {
   #skills {
-    padding: 3% 10%;
+    div {
+      margin: 3em auto;
+      .skills__content {
+        article {
+          div {
+            padding: 0.5em;
+          }
+
+          h3 {
+            font-size: 1.8em;
+          }
+
+          p {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: $mobile) {
   #skills {
-    margin: 32px 0;
-    main {
-      h1 {
-        font-size: 3em;
-        margin-bottom: 12px;
+    div {
+      width: 80vw;
+      margin: 2em auto;
+
+      .skills__content {
+        article {
+          div {
+            padding: 0.5em;
+          }
+
+          h3 {
+            font-size: 1.5em;
+          }
+
+          p {
+            font-size: 1.2em;
+          }
+        }
       }
     }
   }

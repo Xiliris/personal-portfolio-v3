@@ -1,72 +1,82 @@
-@import "../sass/colors.scss", "../sass/mixin.scss";
-
+@import "../styles/variable.scss";
 #about {
-  @include page();
-  main {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: $background;
+  position: relative;
+
+  div {
+    margin: 16em auto;
     display: flex;
     flex-direction: column;
+    width: 70vw;
 
-    h1 {
-      @include title;
+    p {
+      color: $primary;
+      font-size: 3em;
+      font-weight: bold;
     }
-    section {
-      margin-top: 16px;
+  }
+
+  img {
+    width: 400px;
+    height: 400px;
+    transform: translateX(100px) rotate(-45deg);
+    filter: opacity(0.7);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  #about {
+    div {
+      margin: 12em auto;
       p {
-        color: $secondary;
-        font-size: 1.2em;
-
-        &:nth-child(odd) {
-          margin-bottom: 16px;
-        }
+        font-size: 2.5em;
       }
     }
 
-    a {
-      margin-left: auto;
-    }
-
-    button {
-      margin-top: 32px;
-      border: 1px solid $primary-emphasis;
-      border-radius: 6px;
-      background-color: $primary-emphasis;
-      padding: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-
-      &:hover {
-        background-color: $primary-emphasis;
-        color: black;
-      }
+    img {
+      width: 300px;
+      height: 300px;
+      transform: translateX(100px) rotate(-45deg);
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $tablet) {
   #about {
-    padding: 3% 10%;
-
-    main {
-      h1 {
-        font-size: 4em;
-        margin-bottom: 12px;
-      }
-
+    div {
+      margin-top: 6em;
       p {
-        font-size: 1em;
-        margin: 10px 0;
+        font-size: 1.8em;
       }
+    }
+    img {
+      width: 250px;
+      height: 250px;
+      transform: rotate(-45deg) translateX(100px);
+      bottom: -50px;
     }
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: $mobile) {
   #about {
-    main {
-      h1 {
-        font-size: 3em;
-        margin-bottom: 12px;
+    div {
+      width: 80vw;
+      p {
+        font-size: 1.5em;
       }
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      transform: rotate(-45deg) translateX(100px) !important;
+      bottom: -100px;
     }
   }
 }

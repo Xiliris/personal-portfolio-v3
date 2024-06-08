@@ -1,5 +1,22 @@
-@import "../sass/colors.scss", "../sass/mixin.scss";
+@import "../styles/variable.scss";
 
-h1 {
-  @include title;
+.title {
+  font-size: 1em;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+@media screen and (max-width: $desktop) {
+  .title {
+    font-size: 0.8em;
+    letter-spacing: 0.3em;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .title {
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+  }
 }

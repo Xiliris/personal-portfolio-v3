@@ -1,0 +1,26 @@
+@import "../styles/variable.scss";
+
+footer {
+  background-color: $primary-emphasis;
+  padding: 3em;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      color: $background;
+      font-size: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  footer {
+    padding: 1.2em;
+    div {
+      p {
+        font-size: 0.8em;
+      }
+    }
+  }
+}

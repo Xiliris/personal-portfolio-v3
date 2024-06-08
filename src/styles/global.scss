@@ -1,0 +1,105 @@
+@import "./variable.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  font-family: Avant Garde, sans-serif;
+  cursor: default;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: $background;
+  overflow-x: hidden;
+}
+
+.app,
+#root,
+#__next {
+  overflow-x: hidden;
+}
+
+span {
+  color: $primary-emphasis;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+i,
+span {
+  -webkit-tap-highlight-color: transparent;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+button {
+  overflow-wrap: break-word;
+
+  &::selection {
+    background-color: $hover;
+    color: black;
+  }
+}
+
+#root,
+#__next {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Firefox */
+
+/* Webkit-based browsers */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0; /* Also hide horizontal scrollbar if needed */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
