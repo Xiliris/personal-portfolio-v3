@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -21,12 +25,14 @@ body {
   -webkit-font-smoothing: antialiased;
   background: $background;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .app,
 #root,
 #__next {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 span {
