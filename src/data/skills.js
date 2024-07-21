@@ -2,13 +2,13 @@ const skills = [
   {
     name: "Frontend",
     description:
-      "With over <span>3 years of experience</span>, I specialize in developing high-quality websites featuring responsive design, animations, and interactivity for both desktop and mobile devices. I utilize the latest technologies, including <span>React</span>, <span>Redux</span>, <span>Next.js</span>, and more, to ensure modern and efficient solutions.",
+      "With over <span>3 years of experience</span>, I specialize in developing high-quality websites featuring responsive design, animations, and interactivity for both desktop and mobile devices. I utilize the latest technologies, including <span>React</span>, <span>Redux</span>, <span>Next.js</span>, <span>PHP</span>, and more, to ensure modern and efficient solutions.",
     icon: "fa-solid fa-window-maximize",
   },
   {
     name: "Backend",
     description:
-      "With over <span>2 years of experience</span>, I specialize in developing scalable and secure backend solutions. I utilize <span>Node.js</span>, <span>Express</span>, <span>MongoDB</span>, <span>MySQL</span>, <span>Redis</span>, <span>Python</span>, <span>Django</span>, and other technologies to create APIs, manage databases, and ensure the smooth operation of web applications.",
+      "With over <span>2 years of experience</span>, I specialize in developing scalable and secure backend solutions. I utilize <span>Node.js</span>, <span>Express</span>, <span>MongoDB</span>, <span>MySQL</span>, <span>Redis</span>, <span>PHP</span>, <span>Python</span>, <span>Django</span>, and other technologies to create APIs, manage databases, and ensure the smooth operation of web applications.",
     icon: "fa-solid fa-server",
   },
   {

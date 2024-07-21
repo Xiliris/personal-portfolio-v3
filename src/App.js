@@ -11,7 +11,7 @@ const History = lazy(() => import("./pages/History"));
 const Feedback = lazy(() => import("./pages/Feedback"));
 const Footer = lazy(() => import("./pages/Footer"));
 const Copy = lazy(() => import("./pages/Copy"));
-const Skills = lazy(() => wait(2000).then(() => import("./pages/Skills")));
+const Skills = lazy(() => import("./pages/Skills"));
 
 function App() {
   return (
@@ -32,9 +32,4 @@ function App() {
     </div>
   );
 }
-
-function wait(time) {
-  return new Promise((resolve) => setTimeout(resolve, time));
-}
-
 export default App;
