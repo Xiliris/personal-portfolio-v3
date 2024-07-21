@@ -37,9 +37,8 @@ function Article({ year, position, company, key }) {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.5 }}
-          >
-            {position}
-          </motion.h3>
+            dangerouslySetInnerHTML={{ __html: position }}
+          ></motion.h3>
           <motion.p
             variants={titleAnimation}
             initial="initial"

@@ -38,11 +38,14 @@ export default function Skills() {
               icon={skills[currentSkillIndex]?.icon}
               description={skills[currentSkillIndex]?.description}
               direction={direction}
+              onSwipe={(isNext) => {
+                changeSkill(isNext);
+              }}
             />
           </AnimatePresence>
           <div className="skills__overview">
             <span
-              class="material-symbols-outlined"
+              className="material-symbols-outlined"
               onClick={() => changeSkill(false)}
               aria-label="Previous Skill"
             >
@@ -56,7 +59,7 @@ export default function Skills() {
               ></i>
             ))}
             <span
-              class="material-symbols-outlined"
+              className="material-symbols-outlined"
               onClick={() => changeSkill(true)}
               aria-label="Next Skill"
             >
@@ -69,42 +72,62 @@ export default function Skills() {
   );
 }
 
-function Article({ name, description, icon, direction }) {
-  const variants = animationVariants[direction === "forward" ? "next" : "prev"];
+function Article({ name, description, icon, direction, onSwipe }) {
+  const [swipeDirection, setSwipeDirection] = useState(direction);
+
+  const variants =
+    animationVariants[swipeDirection === "forward" ? "next" : "prev"];
   const swipeVariant =
-    swipeAnimation[direction === "forward" ? "next" : "prev"];
+    swipeAnimation[swipeDirection === "forward" ? "next" : "prev"];
+
+  const handleDragEnd = (event, info) => {
+    if (info.offset.x < -1) {
+      setSwipeDirection("forward");
+      onSwipe(true);
+    } else if (info.offset.x > 1) {
+      setSwipeDirection("backward");
+      onSwipe(false);
+    }
+  };
+
   return (
-    <motion.article
-      key={name}
+    <motion.div
+      className="article-container"
       variants={variants}
       initial="initial"
       animate="animate"
       exit="exit"
+      drag="x"
+      dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={0.1}
+      onDragEnd={handleDragEnd}
     >
-      <div>
-        <motion.h3
-          id={name}
-          variants={swipeVariant}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, amount: 0.5 }}
-        >
-          <motion.i
-            variants={itemVariants}
+      <motion.article>
+        <div>
+          <motion.h3
+            id={name}
+            variants={swipeVariant}
             initial="initial"
-            animate="animate"
-            className={`${icon}`}
-          ></motion.i>
-          {name}
-        </motion.h3>
-        <motion.p
-          variants={swipeVariant}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, amount: 0.5 }}
-          dangerouslySetInnerHTML={{ __html: description }}
-        ></motion.p>
-      </div>
-    </motion.article>
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            <motion.i
+              variants={itemVariants}
+              initial="initial"
+              animate="animate"
+              className={`${icon}`}
+            ></motion.i>
+            {name}
+          </motion.h3>
+          <motion.p
+            variants={swipeVariant}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.5 }}
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></motion.p>
+        </div>
+      </motion.article>
+    </motion.div>
   );
 }

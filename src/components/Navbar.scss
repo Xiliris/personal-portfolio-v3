@@ -5,6 +5,7 @@ nav {
   padding: 2rem 3rem;
   width: 100vw;
   background: linear-gradient($background, transparent);
+  backdrop-filter: blur(6px);
 
   display: flex;
   justify-content: space-between;
