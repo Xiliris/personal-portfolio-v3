@@ -16,6 +16,7 @@ footer {
 
 @media screen and (max-width: $mobile) {
   footer {
+    transform: translateY(-1px);
     padding: 1.2em;
     div {
       p {
