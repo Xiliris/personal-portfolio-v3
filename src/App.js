@@ -12,6 +12,7 @@ const Feedback = lazy(() => import("./pages/Feedback"));
 const Footer = lazy(() => import("./pages/Footer"));
 const Copy = lazy(() => import("./pages/Copy"));
 const Skills = lazy(() => import("./pages/Skills"));
+const Projects = lazy(() => import("./pages/Projects"));
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Skills />
         <Experience />
         <History />
+        <Projects />
         <Feedback />
         <Footer />
         <Copy />
