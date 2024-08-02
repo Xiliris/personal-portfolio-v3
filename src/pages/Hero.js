@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { textAnimation } from "../animations/text";
+import { titleAnimation, textAnimation2 } from "../animations/text";
 import Background from "../images/background.jpg";
 import "./Hero.scss";
 
@@ -8,9 +8,16 @@ export default function Hero() {
     <main id="hero">
       <img src={Background} alt="Background" />
       <div>
-        <p>ADNAN SKOPLJAK</p>
+        <motion.p
+          variants={textAnimation2}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          ADNAN SKOPLJAK
+        </motion.p>
         <motion.h2
-          variants={textAnimation}
+          variants={titleAnimation}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
@@ -18,7 +25,7 @@ export default function Hero() {
           Creating <span>innovative</span>
         </motion.h2>
         <motion.h2
-          variants={textAnimation}
+          variants={titleAnimation}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
@@ -26,7 +33,7 @@ export default function Hero() {
           solutions to <span>complex</span>
         </motion.h2>
         <motion.h2
-          variants={textAnimation}
+          variants={titleAnimation}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}

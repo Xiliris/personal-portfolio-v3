@@ -10,7 +10,6 @@ const swipeAnimation = {
     transition: {
       type: "spring",
       duration: 1,
-      delay: 0.5,
     },
   },
 };

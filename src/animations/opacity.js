@@ -1,6 +1,22 @@
 const opacityAnimation = {
   initial: {
     opacity: 0,
+    y: 50,
+  },
+
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      duration: 1,
+    },
+  },
+};
+
+const onlyOpacityAnimation = {
+  initial: {
+    opacity: 0,
   },
 
   animate: {
@@ -14,4 +30,5 @@ const opacityAnimation = {
 
 module.exports = {
   opacityAnimation,
+  onlyOpacityAnimation,
 };

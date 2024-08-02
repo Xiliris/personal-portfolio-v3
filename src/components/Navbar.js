@@ -1,12 +1,12 @@
 import Logo from "../images/logo.png";
 import { motion } from "framer-motion";
-import { opacityAnimation } from "../animations/opacity";
+import { onlyOpacityAnimation } from "../animations/opacity";
 import "./Navbar.scss";
 
 export default function Navbar() {
   return (
     <motion.nav
-      variants={opacityAnimation}
+      variants={onlyOpacityAnimation}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.5 }}
