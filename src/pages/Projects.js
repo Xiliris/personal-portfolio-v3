@@ -54,7 +54,7 @@ export default function Projects() {
               "Tailwind",
               "Node.js",
               "Express.js",
-              "MongoDB",
+              "MariaDB",
               "Github",
             ]}
             banner={ClickpulseBanner}
@@ -81,13 +81,6 @@ export default function Projects() {
               "MongoDB",
             ]}
             banner={LinkerAppBanner}
-          />
-          <Article
-            name="Portal"
-            link="Expired"
-            url={null}
-            stack={["PHP", "JavaScript", "Github", "Apache", "MySQL"]}
-            banner={PortalBanner}
           />
           <Article
             name="Enkla Social Media"
