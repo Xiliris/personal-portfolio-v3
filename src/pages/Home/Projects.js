@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 import Title from "../../components/Title";
