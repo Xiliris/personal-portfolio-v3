@@ -1,0 +1,87 @@
+@import "../../styles/variable.scss";
+
+#projects__route {
+  width: 70vw;
+  margin: 10em auto;
+
+  .projects__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 1em;
+    border-bottom: 1px solid $primary;
+  }
+
+  .projects__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2em;
+
+    P {
+      color: $primary;
+
+      font-size: 1.5em;
+    }
+
+    .projects__stack {
+      margin-top: 2em;
+      display: flex;
+      gap: 0.5em;
+      flex-wrap: wrap;
+    }
+
+    a {
+      margin-top: 2em;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: $desktop) {
+  #projects__route {
+    width: 80vw;
+  }
+}
+
+@media (max-width: $tablet) {
+  #projects__route {
+    width: 90vw;
+
+    .projects__content {
+      p {
+        text-align: center;
+      }
+
+      .projects__stack {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      a {
+        margin: 0 auto;
+        margin-top: 2em;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  #projects__route {
+    .projects__content {
+      p {
+        font-size: 1.2em;
+      }
+
+      .projects__stack {
+        span {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}

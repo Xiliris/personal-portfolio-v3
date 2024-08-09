@@ -1,3 +1,4 @@
+import { HashLink } from "react-router-hash-link";
 import Logo from "../images/logo.png";
 import { motion } from "framer-motion";
 import { onlyOpacityAnimation } from "../animations/opacity";
@@ -11,20 +12,20 @@ export default function Navbar() {
       whileInView="animate"
       viewport={{ once: true, amount: 0.5 }}
     >
-      <a href="#hero">
+      <HashLink to="/#hero">
         <img src={Logo} alt="Logo" />
-      </a>
+      </HashLink>
       <div>
         <ul>
-          <a href="#about">
+          <HashLink to="/#about">
             <li>About</li>
-          </a>
-          <a href="#experience">
+          </HashLink>
+          <HashLink to="/#experience">
             <li>Work</li>
-          </a>
-          <a href="#footer">
+          </HashLink>
+          <HashLink to="/#footer">
             <li>Contact</li>
-          </a>
+          </HashLink>
         </ul>
       </div>
     </motion.nav>

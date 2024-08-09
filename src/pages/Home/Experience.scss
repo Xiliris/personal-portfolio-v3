@@ -1,4 +1,4 @@
-@import "../styles/variable.scss";
+@import "../../styles/variable.scss";
 
 #experience {
   display: flex;
@@ -44,6 +44,8 @@
 
       span {
         color: $primary;
+        position: relative;
+        z-index: 1;
       }
     }
   }

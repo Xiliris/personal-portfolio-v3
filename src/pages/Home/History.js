@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import Title from "../components/Title";
+import Title from "../../components/Title";
 import "./History.scss";
-import history from "../data/history";
-import { yearAnimation, titleAnimation } from "../animations/historyAnimation";
+import history from "../../data/history";
+import { yearAnimation, titleAnimation } from "../../animations/historyAnimation";
 
 export default function History() {
   return (
@@ -19,9 +19,9 @@ export default function History() {
   );
 }
 
-function Article({ year, position, company, key }) {
+function Article({ year, position, company }) {
   return (
-    <article key={key}>
+    <article>
       <div className="inner__content">
         <motion.h3
           variants={yearAnimation}

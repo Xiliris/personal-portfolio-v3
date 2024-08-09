@@ -1,0 +1,80 @@
+@import "../../styles/variable.scss";
+
+#projects {
+  display: flex;
+  flex-direction: column;
+
+  .projects__container {
+    width: 70vw;
+    margin: 12em auto;
+    margin-bottom: 0;
+
+    .title-bg {
+      width: 100vw;
+      background-color: $primary-emphasis;
+      margin: 0;
+    }
+    .projects__content {
+      margin-top: 2em;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-gap: 1em;
+
+      a {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 16/9;
+          object-fit: cover;
+          border-radius: 0.5em;
+          cursor: pointer;
+          filter: brightness(0.8);
+        }
+
+        h3 {
+          position: absolute;
+          color: $primary;
+          bottom: -1.5em;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 2;
+          transition: bottom 0.4s ease;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 50%;
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+          z-index: 1;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+
+        &:hover::before {
+          opacity: 1;
+        }
+
+        &:hover h3 {
+          bottom: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  #projects {
+    .projects__container {
+      width: 80vw;
+      margin: 8em auto;
+    }
+  }
+}

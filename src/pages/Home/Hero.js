@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { titleAnimation, textAnimation2 } from "../animations/text";
-import Background from "../images/background.jpg";
+import { titleAnimation, textAnimation2 } from "../../animations/text";
+import Background from "../../images/background.jpg";
 import "./Hero.scss";
 
 export default function Hero() {

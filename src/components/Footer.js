@@ -1,11 +1,7 @@
 import { motion } from "framer-motion";
-import Title from "../components/Title";
+import Title from "./Title";
 import "./Footer.scss";
-import {
-  itemAnimation,
-  valueAnimation,
-  titleAnimation,
-} from "../animations/footerAnimation";
+import { itemAnimation, valueAnimation, titleAnimation } from "../animations/footerAnimation";
 
 export default function Footer() {
   return (
@@ -16,23 +12,13 @@ export default function Footer() {
           <div className="footer__socials">
             <div>
               {fistSocials.map((social, index) => (
-                <Anchor
-                  link={social.link}
-                  label={social.label}
-                  index={index}
-                  key={index + 3}
-                />
+                <Anchor link={social.link} label={social.label} index={index} key={index + 3} />
               ))}
             </div>
 
             <div>
               {secondSocials.map((social, index) => (
-                <Anchor
-                  link={social.link}
-                  label={social.label}
-                  index={index}
-                  key={index + 3}
-                />
+                <Anchor link={social.link} label={social.label} index={index} key={index + 3} />
               ))}
             </div>
           </div>
@@ -80,16 +66,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div class="wave3">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
+      <div className="wave3">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path
             d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            class="shape-fill"
+            className="shape-fill"
           ></path>
         </svg>
       </div>
@@ -97,7 +78,7 @@ export default function Footer() {
   );
 }
 
-function Anchor({ link, label, index, key }) {
+function Anchor({ link, label, index }) {
   return (
     <motion.a
       variants={itemAnimation}
@@ -105,13 +86,12 @@ function Anchor({ link, label, index, key }) {
       whileInView="animate"
       custom={{ index: index, time: 0.2 }}
       viewport={{ once: true, amount: 0.5 }}
-      key={key}
       href={link}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
     >
-      <span class="material-symbols-outlined">send</span>
+      <span className="material-symbols-outlined">send</span>
       {label}
     </motion.a>
   );

@@ -1,13 +1,9 @@
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Title from "../components/Title";
-import skills from "../data/skills";
+import Title from "../../components/Title";
+import skills from "../../data/skills";
 import "./Skills.scss";
-import {
-  animationVariants,
-  itemVariants,
-  swipeAnimation,
-} from "../animations/skillsAnimation";
+import { animationVariants, itemVariants, swipeAnimation } from "../../animations/skillsAnimation";
 
 export default function Skills() {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
@@ -17,9 +13,7 @@ export default function Skills() {
     setCurrentSkillIndex((prevIndex) => {
       const nextIndex = isNext ? prevIndex + 1 : prevIndex - 1;
       const resetIndex = isNext ? 0 : skills.length - 1;
-      return nextIndex < 0 || nextIndex >= skills.length
-        ? resetIndex
-        : nextIndex;
+      return nextIndex < 0 || nextIndex >= skills.length ? resetIndex : nextIndex;
     });
     setDirection(isNext ? "forward" : "backward");
   }, []);
@@ -44,11 +38,7 @@ export default function Skills() {
             />
           </AnimatePresence>
           <div className="skills__overview">
-            <span
-              className="material-symbols-outlined"
-              onClick={() => changeSkill(false)}
-              aria-label="Previous Skill"
-            >
+            <span className="material-symbols-outlined" onClick={() => changeSkill(false)} aria-label="Previous Skill">
               arrow_left
             </span>
             {skills.map((skill, index) => (
@@ -58,11 +48,7 @@ export default function Skills() {
                 onClick={() => setCurrentSkillIndex(index)}
               ></i>
             ))}
-            <span
-              className="material-symbols-outlined"
-              onClick={() => changeSkill(true)}
-              aria-label="Next Skill"
-            >
+            <span className="material-symbols-outlined" onClick={() => changeSkill(true)} aria-label="Next Skill">
               arrow_right
             </span>
           </div>
@@ -75,10 +61,8 @@ export default function Skills() {
 function Article({ name, description, icon, direction, onSwipe }) {
   const [swipeDirection, setSwipeDirection] = useState(direction);
 
-  const variants =
-    animationVariants[swipeDirection === "forward" ? "next" : "prev"];
-  const swipeVariant =
-    swipeAnimation[swipeDirection === "forward" ? "next" : "prev"];
+  const variants = animationVariants[swipeDirection === "forward" ? "next" : "prev"];
+  const swipeVariant = swipeAnimation[swipeDirection === "forward" ? "next" : "prev"];
 
   const handleDragEnd = (event, info) => {
     if (info.offset.x < -1) {
@@ -111,12 +95,7 @@ function Article({ name, description, icon, direction, onSwipe }) {
             whileInView="animate"
             viewport={{ once: true, amount: 0.5 }}
           >
-            <motion.i
-              variants={itemVariants}
-              initial="initial"
-              animate="animate"
-              className={`${icon}`}
-            ></motion.i>
+            <motion.i variants={itemVariants} initial="initial" animate="animate" className={`${icon}`}></motion.i>
             {name}
           </motion.h3>
           <motion.p

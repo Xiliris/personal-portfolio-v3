@@ -1,7 +1,7 @@
 const experience = [
   {
     year: "NOW",
-    position: "Fullstack Developer <br/>& Team Lead",
+    position: "Web Developer",
     company: "Freelance",
   },
   {
@@ -16,7 +16,7 @@ const experience = [
   },
   {
     year: "2022",
-    position: "Fullstack Developer",
+    position: "Web Developer",
     company: "STEELPRO",
   },
 ];

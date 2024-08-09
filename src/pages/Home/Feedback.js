@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
-import Title from "../components/Title";
-import feedback from "../data/feedback";
-import {
-  titleAnimation,
-  swipeAnimation,
-} from "../animations/feedbackAnimation";
+import Title from "../../components/Title";
+import feedback from "../../data/feedback";
+import { titleAnimation, swipeAnimation } from "../../animations/feedbackAnimation";
 import "./Feedback.scss";
 
 export default function Feedback() {
@@ -20,9 +17,9 @@ export default function Feedback() {
   );
 }
 
-function Article({ name, role, company, feedback, key }) {
+function Article({ name, role, company, feedback }) {
   return (
-    <article key={key}>
+    <article>
       <div className="feedback__content">
         <motion.h3
           variants={swipeAnimation}
@@ -30,7 +27,7 @@ function Article({ name, role, company, feedback, key }) {
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
         >
-          <span class="material-symbols-outlined">format_quote</span>
+          <span className="material-symbols-outlined">format_quote</span>
           {feedback}
         </motion.h3>
         <div>
