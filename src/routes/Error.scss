@@ -1,0 +1,74 @@
+@import "../styles/variable.scss";
+
+#error {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden !important;
+  position: relative;
+
+  h1 {
+    color: $primary-emphasis;
+    font-size: 4em;
+  }
+
+  div {
+    font-size: 2em;
+    text-align: center;
+    p {
+      color: $primary;
+      line-height: 1.2em;
+    }
+  }
+
+  button {
+    margin-top: 2em;
+  }
+  .dogo {
+    width: 600px;
+    height: 600px;
+    transform: translateX(160px) rotate(-45deg);
+    filter: opacity(0.7);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  #error {
+    .dogo {
+      width: 400px;
+      height: 400px;
+      transform: translateX(100px) rotate(-45deg);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  #error {
+    h1 {
+      font-size: 3em;
+    }
+
+    div {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  #error {
+    button {
+      transform: scale(0.8);
+    }
+    .dogo {
+      width: 300px;
+      height: 300px;
+      transform: translateX(100px) rotate(-45deg);
+    }
+  }
+}
