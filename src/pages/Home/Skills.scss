@@ -17,7 +17,7 @@
 
       article {
         border: 1px solid $primary;
-        height: 50vh;
+        min-height: 55vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -45,14 +45,14 @@
           height: 90%;
           width: 90%;
           border: 1px solid transparent;
-          background-color: $background;
+          background-color: transparent !important;
           margin: 0;
           z-index: 20;
         }
 
         h3 {
           color: $primary;
-          font-size: 2.5em;
+          font-size: 2.2em;
           text-transform: uppercase;
           i {
             margin-right: 10px;
@@ -62,7 +62,8 @@
 
         p {
           color: $primary;
-          font-size: 2.2em;
+          font-size: 2em;
+          padding: 1em;
           text-align: start;
           margin: auto;
         }
@@ -106,6 +107,17 @@
         }
       }
     }
+  }
+}
+@media screen and (max-width: $laptop) {
+  #skills {
+    div {
+      .skills__content {
+        article {
+          p {
+            font-size: 1.5em;
+          }
+        }}}
   }
 }
 
