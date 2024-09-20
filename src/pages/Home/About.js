@@ -15,7 +15,7 @@ export default function About() {
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
         >
-          I am a <span>Web Developer</span> located in Kreševo, Bosnia and Herzegovina. I specialize in creating
+          I am a <span>Web Developer</span> based in Kreševo, Bosnia and Herzegovina. I specialize in creating
           high-quality, modern web applications, bringing innovative ideas to life with cutting-edge technology and a
           passion for excellence.
         </motion.p>
