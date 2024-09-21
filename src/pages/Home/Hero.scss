@@ -21,12 +21,22 @@
     text-align: center;
     z-index: 100;
 
-    p {
+    h1 {
       font-size: 1.5rem;
-      letter-spacing: 1em;
+      letter-spacing: 0.8em;
       color: $primary;
       cursor: default;
       margin-bottom: 1em;
+      position: relative;
+
+      span {
+        color: $primary;
+        font-size: 0.5em;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     h2 {
@@ -45,7 +55,7 @@
 @media screen and (max-width: $desktop) {
   #hero {
     div {
-      p {
+      h1 {
         font-size: 1rem;
         letter-spacing: 0.5em;
       }

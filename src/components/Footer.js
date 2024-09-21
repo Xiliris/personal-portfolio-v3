@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import Title from "./Title";
 import "./Footer.scss";
-import { itemAnimation, valueAnimation, titleAnimation } from "../animations/footerAnimation";
+import {
+  itemAnimation,
+  valueAnimation,
+  titleAnimation,
+} from "../animations/footerAnimation";
 
 export default function Footer() {
   return (
@@ -12,20 +16,30 @@ export default function Footer() {
           <div className="footer__socials">
             <div>
               {fistSocials.map((social, index) => (
-                <Anchor link={social.link} label={social.label} index={index} key={index + 3} />
+                <Anchor
+                  link={social.link}
+                  label={social.label}
+                  index={index}
+                  key={index + 3}
+                />
               ))}
             </div>
 
             <div>
               {secondSocials.map((social, index) => (
-                <Anchor link={social.link} label={social.label} index={index} key={index + 3} />
+                <Anchor
+                  link={social.link}
+                  label={social.label}
+                  index={index}
+                  key={index + 3}
+                />
               ))}
             </div>
           </div>
 
           <div className="footer__contacts">
             <div>
-              <motion.h4
+              <motion.h3
                 variants={titleAnimation}
                 initial="initial"
                 whileInView="animate"
@@ -33,7 +47,7 @@ export default function Footer() {
                 className="phone"
               >
                 Phone
-              </motion.h4>
+              </motion.h3>
               <motion.p
                 variants={valueAnimation}
                 initial="initial"
@@ -44,7 +58,7 @@ export default function Footer() {
               </motion.p>
             </div>
             <div>
-              <motion.h4
+              <motion.h3
                 variants={titleAnimation}
                 initial="initial"
                 whileInView="animate"
@@ -52,7 +66,7 @@ export default function Footer() {
                 className="phone"
               >
                 Email
-              </motion.h4>
+              </motion.h3>
               <motion.p
                 variants={valueAnimation}
                 initial="initial"
@@ -67,7 +81,12 @@ export default function Footer() {
       </div>
 
       <div className="wave3">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
           <path
             d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
             className="shape-fill"

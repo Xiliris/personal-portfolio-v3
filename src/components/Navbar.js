@@ -13,7 +13,14 @@ export default function Navbar() {
       viewport={{ once: true, amount: 0.5 }}
     >
       <HashLink to="/#hero">
-        <img src={Logo} alt="Logo" />
+        <img
+          src={Logo}
+          alt="Logo"
+          title="Logo"
+          width={50}
+          height={50}
+          loading="eager"
+        />
       </HashLink>
       <div>
         <ul>

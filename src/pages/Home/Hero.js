@@ -6,16 +6,24 @@ import "./Hero.scss";
 export default function Hero() {
   return (
     <main id="hero">
-      <img src={Background} alt="Background" />
+      <img
+        src={Background}
+        alt="Background"
+        title="background"
+        width={1920}
+        height={1280}
+        loading="eager"
+      />
       <div>
-        <motion.p
+        <motion.h1
           variants={textAnimation2}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
         >
           ADNAN SKOPLJAK
-        </motion.p>
+          <span>Developer</span>
+        </motion.h1>
         <motion.h2
           variants={titleAnimation}
           initial="initial"
