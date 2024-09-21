@@ -27,10 +27,14 @@ function Article({ name, banner }) {
       <motion.img
         src={banner}
         alt={name}
+        title={name}
         variants={opacityAnimation}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.5 }}
+        width={400}
+        height={200}
+        loading="lazy"
       />
 
       <h3>{name}</h3>

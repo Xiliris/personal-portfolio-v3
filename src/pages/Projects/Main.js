@@ -25,9 +25,43 @@ const variatP = {
   },
 };
 
-export default function MainProjects({ name, link, url, description, stack, banner }) {
+const variantTitle = {
+  initial: {
+    opacity: 0,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+      delay: 0.5,
+    },
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+      delay: 0.5,
+    },
+  },
+};
+
+export default function MainProjects({
+  name,
+  link,
+  url,
+  description,
+  stack,
+  banner,
+}) {
   return (
     <main id="projects__route">
+      <motion.h1
+        variants={variantTitle}
+        initial="initial"
+        animate="animate"
+        viewport={{ once: true, amount: 0.5, type: "spring" }}
+      >
+        Explore My Exciting Projects
+      </motion.h1>
       <div className="projects__title">
         <Title>{name}</Title>
         <Anchor link={"/#projects"}>BACK</Anchor>

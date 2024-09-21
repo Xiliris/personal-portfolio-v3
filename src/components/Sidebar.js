@@ -19,7 +19,7 @@ export default function Sidebar() {
             custom={{ index: index, time: 0.1 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <i className={icon}></i>
+            <i className={icon}>‎</i>
           </motion.a>
         ))}
       </div>

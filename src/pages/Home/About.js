@@ -15,12 +15,20 @@ export default function About() {
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
         >
-          I am a <span>Web Developer</span> based in Kreševo, Bosnia and Herzegovina. I specialize in creating
-          high-quality, modern web applications, bringing innovative ideas to life with cutting-edge technology and a
-          passion for excellence.
+          I am a <span>Web Developer</span> based in Kreševo, Bosnia and
+          Herzegovina. I specialize in creating high-quality, modern web
+          applications, bringing innovative ideas to life with cutting-edge
+          technology and a passion for excellence.
         </motion.p>
       </div>
-      <img src={Dogo} alt="Dogo" />
+      <img
+        src={Dogo}
+        alt="Dogo"
+        title="dogo"
+        width={565}
+        height={565}
+        loading="eager"
+      />
     </section>
   );
 }
