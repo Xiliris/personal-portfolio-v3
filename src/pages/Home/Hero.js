@@ -22,7 +22,7 @@ export default function Hero() {
           viewport={{ once: true, amount: 0.5 }}
         >
           ADNAN SKOPLJAK
-          <span>Developer</span>
+          <span>PORTFOLIO</span>
         </motion.h1>
         <motion.h2
           variants={titleAnimation}
