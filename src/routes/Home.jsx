@@ -23,10 +23,9 @@ function Home() {
       <Scroll />
       <Hero />
       <About />
-      <Skills />
+      <Projects />
       <Experience />
       <History />
-      <Projects />
       <Feedback />
       <Footer />
       <Copy />

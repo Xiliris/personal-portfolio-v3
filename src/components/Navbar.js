@@ -27,7 +27,7 @@ export default function Navbar() {
           <HashLink to="/#about">
             <li>About</li>
           </HashLink>
-          <HashLink to="/#experience">
+          <HashLink to="/#projects">
             <li>Work</li>
           </HashLink>
           <HashLink to="/#footer">
