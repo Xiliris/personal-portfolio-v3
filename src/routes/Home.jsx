@@ -12,7 +12,6 @@ const Experience = lazy(() => import("../pages/Home/Experience"));
 const History = lazy(() => import("../pages/Home/History"));
 const Feedback = lazy(() => import("../pages/Home/Feedback"));
 
-const Skills = lazy(() => import("../pages/Home/Skills"));
 const Projects = lazy(() => import("../pages/Home/Projects"));
 
 function Home() {
