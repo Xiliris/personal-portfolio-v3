@@ -36,8 +36,8 @@ const projects = [
   },
   {
     name: "Steelpro",
-    link: "Expired",
-    url: null,
+    link: "Github",
+    url: "https://github.com/Xiliris?tab=repositories",
     description:
       "Steelpro was a web application developed using React, JavaScript, Sass, and Bootstrap. The project featured a responsive design, providing a platform for managing and tracking various tasks and projects. The app combined frontend technologies with a simple and intuitive user experience.",
     stack: ["React", "JavaScript", "Sass", "Bootstrap", "Github"],
@@ -45,8 +45,8 @@ const projects = [
   },
   {
     name: "Linker",
-    link: "Expired",
-    url: null,
+    link: "Github",
+    url: "https://github.com/Xiliris?tab=repositories",
     description:
       "Linker is a web application developed using Bootstrap, SCSS, React, Node.js, and MongoDB. It features a responsive design with a sleek interface, providing a robust platform for managing and linking various types of content. The app combines modern frontend technologies with a powerful backend to deliver an efficient and user-friendly experience.",
     stack: ["React", "JavaScript", "Sass", "Bootstrap", "Github", "Node.js", "Express.js", "MongoDB"],
@@ -55,7 +55,7 @@ const projects = [
   {
     name: "Enkla Social Media",
     link: "Github",
-    url: "https://github.com/Xiliris/social-netowrk",
+    url: "https://github.com/Xiliris?tab=repositories",
     description:
       "Enkla Social Media is a full-stack social media platform developed using React, Node.js, Express.js, Redis, and MongoDB. The project features a modern and responsive design, providing users with a seamless experience for sharing and connecting with others. With a focus on performance and functionality, the platform offers a range of features to enhance user engagement and interaction.",
     stack: ["React", "JavaScript", "Sass", "Node.js", "Express.js", "Redis", "MongoDB", "Github"],
